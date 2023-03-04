@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/***
+/**
  * main - prints "Programing is like building a multiligual puzzle.
  * Return: Always 0.
  * /
