@@ -7,7 +7,7 @@
  * @age: the age of the dog
  * @owner: the name of the owner of the dog
  *
- * dog_typedef - typedef for dog
+ * dog_t - typedef for dog
  */
 struct dog
 {
@@ -15,15 +15,15 @@ struct dog
 	float age;
 	char *owner;
 };
-typedef struct dog dog_typedef;
+typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 void print_dog(struct dog *d);
 
-dog_typedef *new_dog(char *name, float age, char *owner);
+dog_t *new_dog(char *name, float age, char *owner);
 
-void free_dog(dog_typedef *d);
+void free_dog(dog_t *d);
 
 char *_strcpy(char *dest, char *src);
 
