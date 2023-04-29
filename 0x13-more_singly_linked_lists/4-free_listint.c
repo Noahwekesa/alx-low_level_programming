@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * free_listin - program that frees a listint_t list.
+ * free_listint - program that frees a listint_t list.
  * @head: the function list to be freed
  */
 void free_listint(listint_t *head)
