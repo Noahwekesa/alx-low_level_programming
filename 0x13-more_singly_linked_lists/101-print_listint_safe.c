@@ -59,7 +59,7 @@ size_t loop_listint_fun(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nn, indx = 0; 
+	size_t nn, indx = 0;
 	
 	nn = loop_listint_fun(head);
 
