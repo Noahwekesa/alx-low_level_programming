@@ -13,7 +13,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int z = 1 << index;
 
-	if (index > 64)
+	if (index < 64)
 	{
 		*n = (*n & ~z) | ((1 << index) & z);
 		return (1);
