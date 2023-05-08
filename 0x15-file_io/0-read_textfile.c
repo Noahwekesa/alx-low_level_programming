@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * read_textfile - program that reads a text file and
@@ -17,7 +15,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t f_open, f_read, f_write;
-	char f_buff;
+	char *f_buff;
 
 	if (filename == NULL)
 		return (0);
@@ -32,8 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (f_open == -1 || f_read == -1 || f_write == -1 || f_write != f_read)
 	{
-		free(f_buff);
-		close(f_open);
 		return (0);
 	}
 
