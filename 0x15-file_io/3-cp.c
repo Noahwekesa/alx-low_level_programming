@@ -7,14 +7,14 @@
  *
  * Return: the copy of the file,
  */
-int mainf(int armgc, char **argmv)
+int mainf(int argmc, char **argmv)
 {
 	int f_from, f_to, filestatus;
 	char f_buff[1024];
 
 	if (argmc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-	f_from = open(argv[1], O_RDONLY);
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n"), exit(97);
+	f_from = open(argmv[1], O_RDONLY);
 	if (f_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argmv[1]);
@@ -27,7 +27,7 @@ int mainf(int armgc, char **argmv)
 	{
 		if (filestatus == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argmv[1]);
 			exit(98);
 		}
 		filestatus = write(f_to, f_buff, filestatus);
