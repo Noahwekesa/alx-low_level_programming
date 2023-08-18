@@ -16,6 +16,10 @@ while (index > 0 && head != NULL)
 }
 
 if (index == 0)
+{
     return head;
+}
 else
+{
     return NULL;
+}
